@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
 <testsuites name="CodeScoring">	
     <testsuite tests= "55" failures="55" errors="0" skipped="0" time="" name= "ubuntu:latest">
-        <testcase classname="pkg:deb/libc-bin@2.35-0ubuntu3.6?distro=ubuntu-22.04&amp;upstream=glibc" name="[5.0 None] [9.8 Critical] CVE-2023-25139"  time="">
+        <testcase classname="pkg:deb/libc-bin@2.35-0ubuntu3.6?distro=ubuntu-22.04&amp;upstream=glibc" name="[5.0 None] [9.8 Critical] CVE-2023-25139"  time="" file="/go.sum">
+            <failure type="description">sprintf in the GNU C Library (glibc) 2.37 has a buffer overflow (out-of-bounds write) in some situations with a correct buffer size. This is unrelated to CWE-676. It may write beyond the bounds of the destination buffer when attempting to write a padded, thousands-separated string representation of a number, if the buffer is allocated the exact size required to represent that number as a string. For example, 1,234,567 (with padding to 13) overflows by two bytes.</failure>
+        </testcase>
+        <testcase classname="pkg:deb/libc-bin@2.35-0ubuntu3.6?distro=ubuntu-22.04&amp;upstream=glibc" name="[5.0 None] [9.8 Critical] CVE-2023-25139"  time="" file="/go.mod">
             <failure type="description">sprintf in the GNU C Library (glibc) 2.37 has a buffer overflow (out-of-bounds write) in some situations with a correct buffer size. This is unrelated to CWE-676. It may write beyond the bounds of the destination buffer when attempting to write a padded, thousands-separated string representation of a number, if the buffer is allocated the exact size required to represent that number as a string. For example, 1,234,567 (with padding to 13) overflows by two bytes.</failure>
         </testcase>
         <testcase classname="pkg:deb/libc6@2.35-0ubuntu3.6?distro=ubuntu-22.04&amp;upstream=glibc" name="[5.0 None] [9.8 Critical] CVE-2023-25139"  time="">
